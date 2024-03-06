@@ -6,6 +6,7 @@
 \usepackage{cite}
 \usepackage{color}
 \usepackage{caption}
+
 % \usepackage{listings}
 % \usepackage{hyperref}
 % \usepackage{textgreek}
@@ -55,7 +56,7 @@
 
     \section{Temperature Induced Unfolding Transitions}
         The goal in this experiment is to determine the stability of the proteins Lysozyme and BSA 
-        (Bovine Serum Albumin) at different concentrations, 2.5, 5 and 10 µM, by inducing unfolding 
+        (Bovine Serum Albumin) at different concentrations, 2.5, 5 and 10 $\mu M$, by inducing unfolding 
         transitions through temperature changes.
         We detect unfolding using Fluorescence spectroscopy by measuring emission at 
         two wavelengths, 330nm and 350nm, and we expect to see a sharp increase in the ratio
@@ -120,14 +121,25 @@
                 \begin{figure}[H]
                     \centering
                     \includegraphics[width=\textwidth]{../resources/unfolding_tempVconc.png}
-                    \caption{Ratio of Fluorescence at 350nm to 330nm for BSA}
+                    \caption{Transition midpoints relative to concentration for Lysozyme and BSA}
                     \label{fig:temp_v_mid}
                 \end{figure}
             \end{minipage}
             \begin{minipage}{0.45\textwidth}
-                \vspace{-15em}
+                \vspace{-8em}
                 The transition midpoints relative to concentration are plotted in Figure \ref{fig:temp_v_mid}.
-                BSA shows a more linear temperature dependence than Lysozyme. 
+                BSA shows a more linear temperature dependence than Lysozyme. \\
+                
+                This table lists the transition midpoints relative to concentration.\\
+
+                \begin{tabular}{| c | c | c | c |}
+                    \hline
+                    {\bfseries Sample} & 2.5 $\mu M$ & 5 $\mu M$ & 10 $\mu M$ \\
+                    \hline
+                    Lysozyme & 64.21 $^{\circ}$C & 70.19 $^{\circ}$C & 70.66 $^{\circ}$C \\
+                    BSA & 66.85 $^{\circ}$C & 68.24 $^{\circ}$C & 71.83 $^{\circ}$C \\
+                    \hline
+                \end{tabular}
             \end{minipage}
     \pagebreak
     
@@ -155,7 +167,7 @@
             scattering. At low concentrations of Hsp27 (Samples 1 to 3 in Figure~\ref{fig:agg_main}), 
             Lysozyme aggregation isn't effectively inhibited. 
             Thus, the presence of Hsp27 in the solution increases overall absorption. 
-            But it can also be seen that a higher concentration of 10 µM (Sample 3) delays the aggregation. 
+            But it can also be seen that a higher concentration of 10 $\mu M$ (Sample 3) delays the aggregation. 
             
             However, when the concentration of Hsp27 matches that of Lysozyme, aggregation is prevented, 
             resulting in lower absorbance (Sample 4). 
@@ -214,7 +226,7 @@
                     \caption{Michaelis-Menten plot and Lineweaver-Burk plot}\label{fig:mm_plot}
                 \end{figure}
 
-                \noindent From the linear model estimates we get $V_{max}$ = 1.8649 µM/s and for $K_m$ = 194.19 µM.\\
+                \noindent From the linear model estimates we get $V_{max}$ = 1.8649 $\mu M$/s and for $K_m$ = 194.19 $\mu M$.\\
                 We mark the value $V_{max}/2$ on the Michaelis-Menten plot (Fig.~\ref{fig:mm_plot}(a)), which can
                 also give us the value of $K_m$ graphically. 
                 In the Lineweaver-Burk plot (Fig.~\ref{fig:mm_plot}(b)) the slope of the fitted line indicates 
@@ -234,7 +246,7 @@
                 Thus, change in NADH concentration is calculated from the change in absorbance.
                 \begin{center}
                     \begin{tabular}{ c | c | c }
-                        [Pyruvate] µM & $\Delta$A (A.U.) & $\Delta$[NADH] (µM) \\
+                        [Pyruvate] $\mu M$ & $\Delta$A (A.U.) & $\Delta$[NADH] ($\mu M$) \\
                         \hline 
                         5000 & 0.7425 & 119.3729 \\
                         2500 & 0.7365 & 118.4083 \\
