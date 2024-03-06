@@ -65,7 +65,8 @@
             The temperature was increased from 25 °C to 95 °C, at a rate of 2 °C per minute,
             and corresponding fluorescence at wavelengths 350nm and 330nm was measured.
 
-            \subsubsection*{Lysozyme - Fluorescence vs. Temperature}
+            \begin{itemize}
+                \item {\bfseries Lysozyme - Fluorescence vs. Temperature}
                 \begin{figure}[H]
                     \centering
                     \begin{tabular}{cc}
@@ -76,7 +77,7 @@
                     \caption{Lysozyme Fluorescence at wavelengths (a) 350nm and (b) 330nm}\label{fig:lys_flr}
                 \end{figure}
                 
-            \subsubsection*{BSA - Fluorescence vs. Temperature}
+                \item {\bfseries BSA - Fluorescence vs. Temperature}
                 \begin{figure}[H]
                     \centering
                     \begin{tabular}{cc}
@@ -86,6 +87,7 @@
                     \end{tabular}
                     \caption{BSA Fluorescence at wavelengths (a) 350nm and (b) 330nm}\label{fig:bsa_flr}
                 \end{figure}
+            \end{itemize}
 
         \subsection*{Analysis}
             The Fluorescence Ratio graph (Figure~\ref{fig:lys_ratio} and~\ref{fig:bsa_ratio}) was used to 
@@ -124,9 +126,11 @@
                 \caption{Ratio of Fluorescence at 350nm to 330nm for BSA}
                 \label{fig:bsa_ratio}
             \end{figure}
+
+            The transition midpoints are plotted in the two plots.
     \pagebreak
     
-    \section{Lysozyme Aggregation}
+    \section{Lysozyme Aggregation Assay}
         In this experiment, aggregation of Lysozyme was studied to understand protein aggregation, 
         where unfolded polypeptide chains of the proteins Lysozyme and Hsp26 associate irreversibly, 
         leading to the formation of large particles that scatter light. 
@@ -163,21 +167,22 @@
         was observed in this experiment through spectroscopy of NADH.
         
         \subsection*{Measurements}
+            
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=250px]{../resources/kinetics_rates.png}
+                \includegraphics[width=350px]{../resources/kinetics_rates.png}
                 \caption{Rates}\label{fig:mm_rates}
             \end{figure}
             
             \subsection*{Analysis}
-                The Michaelis-Menten plot (see figure x left) could be plotted from the reaction rates 
+                The Michaelis-Menten plot (Figure~\ref{fig:mm_plot}(a)) could be plotted from the reaction rates 
                 and the according concentration of substrate (NADH). It shows that for low substrate 
                 concentrations, the rate of the reaction increases linearly with increasing substrate 
                 concentration. As the substrate concentration increases, the rate of the reaction or 
                 velocity eventually reaches a maximum value ($V_{max}$). In this region, the active sites 
                 of the enzyme are largely occupied by the substrate, and the rate becomes independent 
                 of further increases in substrate concentration.
-            
+
                 \begin{figure}[H]
                     \centering
                     \begin{tabular}{cc}
@@ -190,15 +195,18 @@
 
                 Derived from the Michaelis-Menten plot, the Lineweaver-Burk plot provides a linear 
                 transformation. It is used for determining the kinetic constants, the maximum reaction 
-                rate $V_{max}$ and the Michaelis constant $K_m$. The result for $V_{max}$ = 0.0116 µM/s and for 
-                $K_m$ = 0.1942 µM, respectively.
+                rate $V_{max}$ and the Michaelis constant $K_m$.\\
+                The result for $V_{max}$ = 0.0116 µM/s and for $K_m$ = 0.1942 µM, respectively.
 
                 \begin{center}
-                    \begin{tabular}{|c|}
+                    \begin{tabular}{ c | c }
+                        [S] µM & $\Delta$NADH (µM) \\
                         \hline 
-                        $V_{max}$ = 0.0116 µM/s \\
-                        $K_m$ = 0.1942 µM \\
-                        \hline
+                        5000 & asf \\
+                        2500 & asf \\
+                        1250 & asf \\
+                        5000 & asf \\
+                        5000 & asf \\
                     \end{tabular}
                 \end{center}
 
