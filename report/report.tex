@@ -145,8 +145,7 @@
                     \label{tab:midpoints}
                 \end{center}
 
-                The limit temperature for BSA appears to increase linearly with the concentration. 
-                The limit temperature for Lysozyme increases drastically initially until 5$\mu M$.\\
+                The transition temperature for BSA appears to increase linearly with the concentration. The transition temperature for Lysozyme increases drastically initially until 5$\mu M$.\\
                 After this point, the midpoint appears to increase only slightly with concentration.
             \end{minipage}
     \pagebreak
@@ -164,7 +163,7 @@
             As protein aggregation increases, more light is scattered by the sample. 
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=350px]{../resources/aggregation_main.png}
+                \includegraphics[width=370px]{../resources/aggregation_main.png}
                 \caption{\it Scattering recorded as a function of time.}\label{fig:agg_main}
             \end{figure}
 
@@ -239,14 +238,14 @@
                 the ratio $\frac{K_m}{v_{max}}$.\\
 
                 To find the change in NADH concentration for each sample, we can use the absorbance formula
-                of Lambert-Beer, $A = \epsilon d C$, we have,
+                of Lambert-Beer, $A = \varepsilon d C$, we have,
                 \begin{center}
-                    $\Delta A = \epsilon d \Delta C$
+                    $\Delta A = \varepsilon d \Delta C$
                 \end{center}
 
                 \begin{center}
-                    Thus, $\Delta C = \frac{\Delta A}{\epsilon d}$,
-                    where $\epsilon = 6220 M^{-1} cm^{-1}$ and $d = 1$ cm.
+                    Thus, $\Delta C = \frac{\Delta A}{\varepsilon d}$,
+                    where $\varepsilon = 6220 M^{-1} cm^{-1}$ and $d = 1$ cm.
                 \end{center}
                 
                 \noindent Change in NADH concentration is calculated from the change in absorbance.\\
@@ -285,7 +284,7 @@
                 \begin{tabular}{c c}
                     \includegraphics[width=215px]{../resources/absorption_r1_spectrum.png} &
                     \includegraphics[width=215px]{../resources/absorption_r2_spectrum.png} \\
-                    (Attempt 1) & (Attempt 2)\\
+                    (a) Attempt 1 & (b) Attempt 2\\
                 \end{tabular}
                 \caption{\it Absorbance spectrum of NADH for different concentrations}\label{fig:abs_spectrum}
             \end{figure}
@@ -320,8 +319,9 @@
             temperature caused degradation of NADH.
 
             We have tried to rectify this situation by using the points that are increasing with
-            concentration as expected to fit a linear regression model and predict those absorbance
-            values that should have been observed for these concentrations.
+            concentration as expected to fit a linear regression model, and predict those absorbance
+            values that {\it should} have been observed for those concentrations where this value is
+            not increasing as expected.
 
             \begin{minipage}{0.49\textwidth}
                 \begin{figure}[H]
@@ -333,12 +333,12 @@
             \hspace{0.01\textwidth}
             \begin{minipage}{0.49\textwidth}
                 \vspace{-7em}
-                The accepted and predicted values of\\ absorbance are listed in this table.\\
-                The predicted values are written in {\it italics}.\\
+                The accepted and predicted values of absorbance are listed in this table.
+                The predicted absorbance values are written in {\it italics}.\\
                 
                 \begin{tabular}{| c | c | c |}
                     \hline 
-                    {\bfseries Sample} & {\bfseries Abs (A.U.)} & {\bfseries Source} \\
+                    {\bfseries Sample} & {\bfseries Absorbance (A.U.)} & {\bfseries Source} \\
                     \hline 
                     \hline 
                     1 & 0.001 & Run 2 \\
@@ -348,26 +348,42 @@
                     5 & {\it 0.801} & * \\
                     6 & 0.986 & Run 1 \\
                     \hline
-                \end{tabular}
+                \end{tabular}\\
+
+                * {\small Linear Model based on selected points.}
             \end{minipage}\\
 
-            Now by using the Lambert-Beer law $A = \epsilon d C$ and using the formula
-            $C_1 V_1 = C_2 V_2$, we can find the initial stock concentration of NADH.
+            Now by using the Lambert-Beer law $A = \varepsilon d C$ and using the formula
+            $C_p V_p = C_s V_s$, we can find the initial stock concentration of NADH.
             \begin{center}
-                $ C = \frac{A}{\epsilon d} \mu M$ and $ C_2 = \frac{C_1 V_1}{V_2} $
+                $ C = \frac{A}{\varepsilon d} \mu M$ and $ C_s = \frac{C_p V_p}{V_s} $
                 \vspace{0.5em}
                 
-                Thus $ C_2 = \frac{A V_1}{\epsilon d V_2}$ where,\\
+                Thus $ C_s = \frac{A V_p}{\varepsilon d V_s}$ where,\\
                 \vspace{0.5em}
 
                 \begin{tabular}{c c}
-                    $ V_2 = [0,1,2,3,4,5] \mu L $ & $ V_1 = 1000 \mu L $, \\
-                    $\epsilon = 6220 M^{-1} cm^{-1}$ & $d = 1$ cm.\\
+                    $ V_s = [0,1,2,3,4,5] \mu L $ & $ V_p = 1000 \mu L $, \\
+                    $\varepsilon = 6220 M^{-1} cm^{-1}$ & $d = 1$ cm.\\
                 \end{tabular}
             \end{center}
-
-            Using this formation for all the samples we get mean stock concentration of 
-            {\bfseries 32.328 mM}.
+            
+            \noindent Using this formation for all the samples we get mean stock concentration of 
+            {\bfseries 32.328 mM}. The calculated concentration for each sample is listed 
+            in the table below.
+            
+            \begin{center}
+                \begin{tabular}{c | c c c}
+                    Sample & $ V_s (\mu L) $ & A (A.U.) & $ C_s (mM) $ \\
+                    \hline\hline
+                    1 & 0 & 0.001 & {\it Inf} \\
+                    2 & 1 & 0.201 & 32.315 \\
+                    3 & 2 & 0.410 & 32.993 \\
+                    4 & 3 & 0.605 & 32.449 \\
+                    5 & 4 & 0.801 & 32.177 \\
+                    6 & 5 & 0.986 & 31.704 \\
+                \end{tabular}
+            \end{center}
     \pagebreak
 
 \end{document}
